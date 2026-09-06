@@ -32,6 +32,16 @@ vin-decode 1HGCM82633A004352
   Plant City                   MARYSVILLE
 ```
 
+## At a glance
+
+```mermaid
+flowchart LR
+    A[VIN input] --> B[Local parsing and validation]
+    B --> C[Offline vehicle details]
+    B --> D[NHTSA vPIC lookup]
+    D --> E[Vehicle specifications or typed error]
+```
+
 ## Why validate offline first
 
 A VIN is self-describing. The ninth character is a check digit derived from the
